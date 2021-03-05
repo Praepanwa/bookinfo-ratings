@@ -1,7 +1,7 @@
 services:
   ratings:
     build: .
-    image: ghcr.io/[praepanwa]/bookinfo-ratings:dev
+    image: ghcr.io/praepanwa/bookinfo-ratings:dev
     ports:
       - "8080:8080"
     environment:
