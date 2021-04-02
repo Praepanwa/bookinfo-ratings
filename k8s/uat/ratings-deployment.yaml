@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: bookinfo-uat-ratings
-        image: ghcr.io/praepanwa/bookinfo-ratings:uat
+        image: ghcr.io/praepanwa/bookinfo-ratings:dev
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
