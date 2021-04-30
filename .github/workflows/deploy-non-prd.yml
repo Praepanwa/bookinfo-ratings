@@ -8,7 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-steps:
       - name: Set env
         run: echo "ENV_NAME=$( [ "$GITHUB_REF" == "refs/heads/master" ] && echo 'uat' || echo ${GITHUB_REF##*/} )" >> $GITHUB_ENV
       - name: Login to GitHub Container Registry
@@ -22,7 +21,7 @@ steps:
         with:
           push: true
           tags: ghcr.io/praepanwa/bookinfo-ratings:${{ env.ENV_NAME }}
- deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-20.04
     steps:
