@@ -57,4 +57,5 @@ jobs:
         run: echo "ENV_NAME=$( [ "$GITHUB_REF" == "refs/heads/master" ] && echo 'uat' || echo ${GITHUB_REF##*/} )" >> $GITHUB_ENV
       - name: Check health check page
         run: curl http://bookinfo.${{ env.ENV_NAME }}.opsta.net/student69/ratings/health | grep "Ratings is working"
+
         
