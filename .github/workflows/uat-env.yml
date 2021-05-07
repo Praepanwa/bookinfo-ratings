@@ -45,12 +45,12 @@ jobs:
               "extraEnv": {
                 "COMMIT_SHA": "${{ github.sha }}"
               }
-            }     
+            }  
+               
   acceptance-test:
       needs: deploy
       runs-on: ubuntu-20.04
       steps:
         - name: Check health check page     
           run: curl http://bookinfo.uat.opsta.net/student69/ratings/health | grep "Ratings is working"
-
 
