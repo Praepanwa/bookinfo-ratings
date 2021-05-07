@@ -49,7 +49,6 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
-            
   acceptance-test:
     needs: deploy
     runs-on: ubuntu-20.04
